@@ -1,5 +1,6 @@
 package com.makersharks.makersharks_assessment.dto;
 
+import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.annotation.Nullable;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
@@ -11,6 +12,7 @@ public class UserDto {
 
 
     @Nullable
+    @Schema(hidden = true)
     private  Long id ;
 
     @NotBlank(message = "Email is mandatory")
@@ -22,6 +24,7 @@ public class UserDto {
     private String password;
 
     @Nullable
+    @Schema(hidden = true)
     private List<String> roles ;
 
     public UserDto() {

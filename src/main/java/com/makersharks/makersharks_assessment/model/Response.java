@@ -13,4 +13,5 @@ public class Response {
     private Object data;
     private Integer resultCode;
     private Date timestamp = new Date();
+
 }

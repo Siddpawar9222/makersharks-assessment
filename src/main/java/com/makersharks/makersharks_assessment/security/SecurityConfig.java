@@ -1,6 +1,8 @@
 package com.makersharks.makersharks_assessment.security;
 
+import com.makersharks.makersharks_assessment.exception.AuthenticationEntryPointJWT;
 import com.makersharks.makersharks_assessment.filter.JwtAuthFilter;
+import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -16,15 +18,13 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 
 @Configuration
 @EnableWebSecurity
+@RequiredArgsConstructor
 public class SecurityConfig {
 
     private final  UserDetailsServiceImpl userDetailsService ;
     private  final JwtAuthFilter jwtAuthFilter ;
+    private final AuthenticationEntryPointJWT authenticationEntryPointJWT;
 
-    public SecurityConfig(UserDetailsServiceImpl userDetailsService, JwtAuthFilter jwtAuthFilter) {
-        this.userDetailsService = userDetailsService;
-        this.jwtAuthFilter = jwtAuthFilter;
-    }
 
     @Bean
     public AuthenticationManager authenticationManager(AuthenticationConfiguration configuration) throws Exception {
@@ -55,10 +55,11 @@ public class SecurityConfig {
                 .authorizeHttpRequests((requests) ->
                         requests
 
-                                  .requestMatchers("/h2-console/**","/test/**","/api/auth/**","/api/supplier/**").permitAll()
+                                  .requestMatchers("/h2-console/**","/swagger/**", "/test/**","/api/auth/**").permitAll()
                                   .anyRequest().authenticated()
                 )
                 .authenticationProvider(authenticationProvider())
+                .exceptionHandling(exception->exception.authenticationEntryPoint(authenticationEntryPointJWT))
                 .addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.class);
 
         return http.build();

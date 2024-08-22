@@ -2,6 +2,8 @@ package com.makersharks.makersharks_assessment.controller;
 
 import com.makersharks.makersharks_assessment.model.Response;
 import com.makersharks.makersharks_assessment.service.ManufacturerService;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatusCode;
@@ -17,6 +19,8 @@ import java.util.Date;
 @RequestMapping("/api/supplier/")
 @RequiredArgsConstructor
 @Slf4j
+@Tag(name = "Supplier", description = "Supplier API")
+@SecurityRequirement(name = "bearerAuth")
 public class ManufacturerController {
 
     private final ManufacturerService manufacturerService;
