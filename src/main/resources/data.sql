@@ -63,7 +63,22 @@ VALUES (1, 'Acme Manufacturing', 'http://acme-manufacturing.com', 'USA', 'large_
        (47, 'Psi Enterprises', 'http://psi-enterprises.com', 'Canada', 'large_scale', 'casting'),
        (48, 'Omega Manufacturing', 'http://omega-manufacturing.com', 'Canada', 'medium_scale', 'coating'),
        (49, 'Alpha Industries', 'http://alpha-industries.com', 'UK', 'small_scale', 'moulding'),
-       (50, 'Beta Technologies', 'http://beta-technologies.com', 'UK', 'large_scale', '3d_printing');
+       (50, 'Beta Technologies', 'http://beta-technologies.com', 'UK', 'large_scale', '3d_printing'),
+       (51, 'Shree Casting', 'http://shreecasting.com', 'India', 'small_scale', 'casting'),
+       (52, 'Bharat Foundries', 'http://bharatfoundries.com', 'India', 'small_scale', 'casting'),
+       (53, 'Mithila Metals', 'http://mithilametals.com', 'India', 'small_scale', 'casting'),
+       (54, 'Vishnu Castings', 'http://vishnucastings.com', 'India', 'small_scale', 'casting'),
+       (55, 'Kaveri Foundries', 'http://kaverifoundries.com', 'India', 'small_scale', 'casting'),
+       (56, 'Himalaya Castings', 'http://himalayacastings.com', 'India', 'small_scale', 'casting'),
+       (57, 'Saraswati Metals', 'http://saraswatimetals.com', 'India', 'small_scale', 'casting'),
+       (58, 'Ganga Foundry', 'http://gangafoundry.com', 'India', 'small_scale', 'casting'),
+       (59, 'Krishna Castings', 'http://krishnacastings.com', 'India', 'small_scale', 'casting'),
+       (60, 'Deccan Foundries', 'http://deccanfoundries.com', 'India', 'small_scale', 'casting'),
+       (61, 'Maruthi Metals', 'http://maruthimetals.com', 'India', 'small_scale', 'casting'),
+       (62, 'Sindhu Castings', 'http://sindhucastings.com', 'India', 'small_scale', 'casting'),
+       (63, 'Triveni Foundry', 'http://trivenifoundry.com', 'India', 'small_scale', 'casting'),
+       (64, 'Narmada Metals', 'http://narmadametals.com', 'India', 'small_scale', 'casting'),
+       (65, 'Sangam Castings', 'http://sangamcastings.com', 'India', 'small_scale', 'casting');
 
 
 
