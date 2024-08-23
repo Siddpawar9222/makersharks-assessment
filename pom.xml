@@ -108,6 +108,7 @@
 				</configuration>
 			</plugin>
 		</plugins>
+		<finalName>makersharks-assessment</finalName>
 	</build>
 
 </project>

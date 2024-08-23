@@ -64,7 +64,7 @@ public class AuthService {
 
 
         if (roleList == null) {
-             Role userRole = roleRepository.findByName(ERole.ROLE_USER).orElseThrow(() -> new RuntimeException("Student Role not available"));
+             Role userRole = roleRepository.findByName(ERole.ROLE_USER).orElseThrow(() -> new RuntimeException("User Role not available"));
             role.add(userRole);
         } else {
             for (String r : roleList) {
@@ -74,10 +74,10 @@ public class AuthService {
                     role.add(adminRole);
                 } else if (r.equalsIgnoreCase("user")) {
                     Role userRole = roleRepository.findByName(ERole.ROLE_USER)
-                            .orElseThrow(() -> new ResourceUnavailableException("Student Role is not available"));
+                            .orElseThrow(() -> new ResourceUnavailableException("User Role is not available"));
                     role.add(userRole);
                 } else {
-                    throw new BadRequestException("Only Admin Or Student role is available");
+                    throw new BadRequestException("Only Admin Or user role is available");
                 }
             }
         }
@@ -124,27 +124,5 @@ public class AuthService {
         return response ;
     }
 
-//    @Transactional
-//    public Response getAllRegisteredUsers(){
-//        LOG.info("getAllRegisteredUsers service has started ::: {} ",new Date());
-//        Response response = new Response();
-//        try{
-//            List<User> allUser = userRepository.findAll();
-//            List<UserDto> responseList = new ArrayList<>();
-//            for (User user : allUser) {
-//                UserDto userDto = new UserDto(user.getId(), user.getUsername(),null, Arrays.asList(user.getRoles().stream().map(Role::getName).toArray(String[]::new)));
-//                 responseList.add(userDto);
-//            }
-//
-//            response.setData(responseList);
-//            response.setMessage("Users fetched successfully");
-//            response.setResultCode(200);
-//        }catch (Exception e){
-//            LOG.error("Error while fetching users : {}", e.getMessage());
-//            throw new CaughtException(e.getMessage());
-//        }
-//        LOG.info("getAllRegisteredUsers service has ended ::: {} ",new Date());
-//        return response;
-//    }
 
 }

@@ -44,9 +44,4 @@ public class AuthController {
         log.info("authenticateUser controller ended ::: {} ", new Date());
         return new ResponseEntity<>(response, HttpStatusCode.valueOf(response.getResultCode()));
     }
-
-//    @GetMapping("/allRegisteredUser")
-//    public ResponseEntity<Response> getAllRegister() {
-//        return ResponseEntity.ok(authService.getAllRegisteredUsers());
-//    }
 }
