@@ -33,7 +33,7 @@ Ensure you system have met the following requirements:
 2. **Reach to parent directory:**
 
    ```bash
-     cd makersharks-assessment
+   cd makersharks-assessment
    ```
 
 3. **Open Project in your favourite IDE.**
