@@ -5,9 +5,13 @@
 Ensure you system have met the following requirements:
 
 - Java Development Kit (JDK) 17
-- Maven 3.6.3 or higher (Optional if you are running project only in IDE. If you want to run it command line then it is necessary.)
+- Maven 3.6.3 or higher (Optional if you are running project only in IDE. If you want to run it command line then it is necessary. )
+
+
 
 ---
+
+
 ## Project Dependencies
 
 - **Spring Boot Starter Data JPA**: For JPA-based data access.
@@ -193,7 +197,8 @@ This endpoint allows you to search for suppliers based on location, nature of bu
 - **Authentication:** Bearer Token (Include in the `Authorization` header)
 - **Content-Type:** `application/json`
 - **Request Parameters:**
-
+ 
+ 
    - `location`: Required. 
    - `nature_of_business`: Required.
    - `manufacturing_processes`: Required.
