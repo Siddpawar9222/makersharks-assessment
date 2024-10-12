@@ -7,11 +7,7 @@ Ensure you system have met the following requirements:
 - Java Development Kit (JDK) 17
 - Maven 3.6.3 or higher (Optional if you are running project only in IDE. If you want to run it command line then it is necessary. )
 
-
-
 ---
-
-
 ## Project Dependencies
 
 - **Spring Boot Starter Data JPA**: For JPA-based data access.
@@ -165,7 +161,7 @@ This endpoint allows users to log in by providing their email and password.
     "message": "Login Successful",
     "data": "eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiIxIiwic3ViIjoic2lkZGhlc2hAZ21haWwuY29tIiwiaWF0IjoxNzI0Mzg2NTkzLCJleHAiOjE3MjQzODgzOTN9.CA1zuhhz84hBUEK0hRZ2VN54u9UZUgMXXOB0LT2qLHE",
     "resultCode": 200,
-    "timestamp": "2024-08-23 09:46:32"
+    "timestamp": "2024-08-23 09:46:37"
   }
   ```
 
